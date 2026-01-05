@@ -1,18 +1,27 @@
 {
-  "name": "e-commerce",
+  "name": "e-commerce-mern",
   "version": "1.0.0",
-  "description": "Ecommerce MERN stack project",
-  "main": "server.js",
+  "description": "E-commerce MERN stack project with separate client and server",
+  "main": "server/src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client"
   },
   "keywords": [
     "Ecommerce",
-    "MERN"
+    "MERN",
+    "React",
+    "Node.js",
+    "Express",
+    "MongoDB"
   ],
-  "author": "",
+  "author": "Md Mizanur Rahman",
   "license": "ISC",
-  "dependencies": {
-    "express": "^5.2.1"
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
