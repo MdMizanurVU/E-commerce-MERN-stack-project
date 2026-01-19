@@ -2,8 +2,11 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const createError = require("http-errors");
+
 const xssClean = require("xss-clean");
 const rateLimit = require("express-rate-limit");
+const userRouter = require("./routers/userRouter");
+const seedRouter = require("./routers/seedRouter");
 const app = express();
 
 const rateLimiter = rateLimit({
@@ -18,14 +21,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Temporarily comment out xss-clean to fix the error
 // app.use(xssClean());
 
+app.use("/api/user", userRouter);
+app.use("/api/seed", seedRouter);
+
 app.get("/test", rateLimiter, (req, res) => {
   res.status(200).send({ message: "api testing is working fine" });
-});
-
-app.get("/api/user", (req, res) => {
-  res.status(200).send({
-    message: "user profile is returned",
-  });
 });
 
 //client error handling

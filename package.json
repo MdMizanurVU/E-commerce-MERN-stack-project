@@ -4,7 +4,7 @@
   "description": "E-commerce MERN stack project with separate client and server",
   "main": "server/src/server.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "npm run server",
     "server": "cd server && npm run dev",
     "client": "cd client && npm start",
     "install-server": "cd server && npm install",
@@ -23,5 +23,10 @@
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "mongoose": "^9.1.3"
   }
 }

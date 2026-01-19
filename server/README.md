@@ -10,3 +10,9 @@
 6. Express error handling middleware
 7. How to handle HTTP errors - http-errors
 8. How to secure API- XSS-clea, express-rate-limit
+9. Environment variable & .gitignore
+10. MVC Architecture - model view controller
+11. connect to mongoDB database
+12. Schema and Model for User
+13. create seed route for testing
+14. https://www.youtube.com/watch?v=JiQ9noA-HJg&t=2s

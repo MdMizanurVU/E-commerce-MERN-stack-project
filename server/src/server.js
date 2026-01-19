@@ -1,5 +1,8 @@
 const app = require("./app");
+const connectDB = require("./config/db");
+const { serverPort } = require("./secret");
 
-app.listen(3001, () => {
-  console.log("Server is running at http://localhost:3001");
+app.listen(serverPort, async () => {
+  console.log(`Server is running at http://localhost:${serverPort}`);
+  await connectDB();
 });
