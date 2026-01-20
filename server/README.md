@@ -16,3 +16,5 @@
 12. Schema and Model for User
 13. create seed route for testing
 14. https://www.youtube.com/watch?v=JiQ9noA-HJg&t=2s
+15. Get / Api / Users > isAdmin > getAllUsers > searchbyName > pagination
+16. responseHandler controller for error or success - https://www.youtube.com/watch?v=ZcYTHUg9hjA

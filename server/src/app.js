@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Temporarily comment out xss-clean to fix the error
 // app.use(xssClean());
 
-app.use("/api/user", userRouter);
+app.use("/api/users", userRouter);
 app.use("/api/seed", seedRouter);
 
 app.get("/test", rateLimiter, (req, res) => {
